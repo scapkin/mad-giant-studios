@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mad Giant Studios — an indie game studio building the worlds we've always dreamed of." />
+  <title>Mad Giant Studios</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="siteHeader">
+    <a href="#top" class="brand-mark" aria-label="Mad Giant Studios — home">
+      <img src="assets/logo.svg" alt="" class="brand-logo" />
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#games">Games</a>
+      <a href="#team">Team</a>
+    </nav>
+
+    <a href="#top" class="brand-name">
+      <span>Mad Giant</span>
+      <span class="brand-name__sub">Studios</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="top">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__grain" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <p class="eyebrow reveal">Independent Game Studio · Est. 2025</p>
+      <h1 class="hero__title reveal">
+        For us, making games is about
+        <span class="accent">building the worlds</span>
+        we've always dreamed of.
+      </h1>
+
+      <div class="hero__cta reveal">
+        <a href="#games" class="btn btn--primary">Our Games</a>
+        <a href="#about" class="btn btn--ghost">Who We Are</a>
+      </div>
+    </div>
+
+    <a href="#about" class="hero__scroll" aria-label="Scroll to About">
+      <span></span>
+      <small>scroll</small>
+    </a>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="section about" id="about">
+    <div class="section__inner">
+      <div class="section__head">
+        <span class="section__index">01</span>
+        <h2 class="section__title reveal">About the studio</h2>
+      </div>
+
+      <div class="about__grid">
+        <p class="about__lede reveal">
+          What started as <em>three close friends obsessed with games.</em>
+        </p>
+        <p class="about__body reveal">
+          We've combined <strong>6 years</strong> of professional industry experience
+          and <strong>multiple Game Jam awards</strong> with the energy of our
+          late-night brainstorming sessions. More than anything, we love what we do —
+          and we have fun creating together.
+        </p>
+      </div>
+
+      <div class="stats reveal">
+        <div class="stat">
+          <span class="stat__num">3</span>
+          <span class="stat__label">Friends, one studio</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">6+</span>
+          <span class="stat__label">Years of industry experience</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">∞</span>
+          <span class="stat__label">Late-night brainstorms</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Games ===== -->
+  <section class="section games" id="games">
+    <div class="section__inner">
+      <div class="section__head">
+        <span class="section__index">02</span>
+        <h2 class="section__title reveal">Our games</h2>
+      </div>
+
+      <article class="game reveal">
+        <h3 class="game__title">Real Deal</h3>
+
+        <div class="game__logo-wrap">
+          <img src="assets/real-deal.svg" alt="Real Deal logo" class="game__logo" />
+          <span class="tag">In Development</span>
+        </div>
+
+        <p class="game__desc">
+          A high-stakes experience where every choice changes the table.
+          Bluff, build, and outplay — Real Deal is our love letter to
+          tension-filled moments and the worlds behind them.
+        </p>
+
+        <div class="video-frame">
+          <div
+            class="video-frame__embed"
+            data-yt="aqz-KE-bpKQ"
+            role="button"
+            tabindex="0"
+            aria-label="Play Real Deal trailer"
+          >
+            <img
+              src="https://img.youtube.com/vi/aqz-KE-bpKQ/maxresdefault.jpg"
+              alt="Real Deal trailer thumbnail"
+              loading="lazy"
+            />
+            <span class="video-frame__play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Team ===== -->
+  <section class="section team" id="team">
+    <div class="section__inner">
+      <div class="section__head">
+        <span class="section__index">03</span>
+        <h2 class="section__title reveal">The team</h2>
+      </div>
+
+      <div class="team__grid">
+
+        <article class="member reveal">
+          <div class="member__photo">
+            <img src="assets/team-seyfullah.svg" alt="Seyfullah Çapkın" loading="lazy" />
+          </div>
+          <h3 class="member__name">Seyfullah Çapkın</h3>
+          <p class="member__nickname">“The Old Man”</p>
+          <p class="member__role">Team Lead</p>
+        </article>
+
+        <article class="member reveal">
+          <div class="member__photo">
+            <img src="assets/team-taha.svg" alt="Taha Furkan Ertürk" loading="lazy" />
+          </div>
+          <h3 class="member__name">Taha Furkan Ertürk</h3>
+          <p class="member__nickname">“The Young Boomer”</p>
+          <p class="member__role">Game Programmer</p>
+        </article>
+
+        <article class="member reveal">
+          <div class="member__photo">
+            <img src="assets/team-emre.svg" alt="Emre Susam" loading="lazy" />
+          </div>
+          <h3 class="member__name">Emre Susam</h3>
+          <p class="member__nickname">“The Jester”</p>
+          <p class="member__role">Game Artist</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <img src="assets/logo.svg" alt="" class="site-footer__logo" />
+      <p class="site-footer__tag">Mad Giant Studios — building the worlds we've always dreamed of.</p>
+      <p class="site-footer__copy">© <span id="year"></span> Mad Giant Studios. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
