@@ -73,6 +73,48 @@
     });
   });
 
+  /* ---------- Contact form (AJAX) ---------- */
+  const form = document.getElementById('contactForm');
+  const note = document.getElementById('contactNote');
+  if (form && note) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      note.hidden = true;
+      note.classList.remove('is-success', 'is-error');
+
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending…';
+
+      try {
+        const data = new FormData(form);
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: data
+        });
+
+        if (res.ok) {
+          form.reset();
+          note.textContent = 'Thanks for your message — we will get back to you soon!';
+          note.classList.add('is-success');
+        } else {
+          const j = await res.json().catch(() => null);
+          note.textContent = (j && j.message) || 'Something went wrong. Please try again or email us directly.';
+          note.classList.add('is-error');
+        }
+      } catch (err) {
+        note.textContent = 'Network error. Please try again or email us directly.';
+        note.classList.add('is-error');
+      } finally {
+        note.hidden = false;
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }
+    });
+  }
+
   /* ---------- Footer year ---------- */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
